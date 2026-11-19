@@ -11,6 +11,7 @@ TOKEN = os.environ["DISCORD_TOKEN"]
 CHANNEL_ID = int(os.environ["CHANNEL_ID"])
 
 DATA_FILE = Path("/app/data/roles_data.json")
+DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
 PATTERN = re.compile(r"^\s*rol(?:\s*-\s*|\s+)(.*?)\s*$", re.I)
 
 intents = discord.Intents.default()
